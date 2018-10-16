@@ -24,7 +24,7 @@ injectGlobal`
 
   h1, h2, h3, h4, h5, h6 {
     display: block;
-    margin: 1.414rem 0 0.25rem;
+    margin: 1.414em 0 0.25em;
     color: ${colors.gray.z9};
     font-family: ${fonts.header};
     font-weight: 600;
@@ -45,7 +45,7 @@ injectGlobal`
     letter-spacing: 10px;
 
     @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
   }
   h2 {
@@ -62,29 +62,17 @@ injectGlobal`
     margin-right: -5px;
     font-size: 1.2rem;
     letter-spacing: 5px;
-
-    @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
-      font-size: 1rem;
-    }
   }
   h4 {
     margin-right: -2px;
     font-size: 1rem;
     letter-spacing: 2px;
-
-    @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
-      font-size: 0.9rem;
-    }
   }
   h5 {
     margin-right: -2px;
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 2px;
-
-    @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
-      font-size: 0.75rem;
-    }
   }
   h6 {
     margin-right: -3px;

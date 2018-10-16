@@ -9,18 +9,18 @@ const GOLDEN_RATIO: number = 1.61803398875
 const StyledPaper = styled.div`
   display: grid;
   position: relative;
-  grid-gap: ${getEmSize(15)}em ${getEmSize(45)}em;
+  grid-gap: 0 ${getEmSize(45)}em;
   grid-template:
-    [row1-start] 'header header sidebar' 1fr [row1-end]
-    [row2-start] 'primary secondary sidebar' auto [row2-end]
-    [row3-start] 'other secondary sidebar' 2.5fr [row3-end]
-    / 1fr ${GOLDEN_RATIO}fr ${getEmSize(30)}em;
+    [row1-start] 'header header' auto [row1-end]
+    [row2-start] 'primary secondary' auto [row2-end]
+    [row3-start] 'other secondary' 1fr [row3-end]
+    / 1fr ${GOLDEN_RATIO}fr;
   width: 100vw;
   max-width: ${getEmSize(breakpoints.tabletLandscape)}em;
   height: ${PAPER_RATIO * 100}vw;
   max-height: ${PAPER_RATIO * getEmSize(breakpoints.tabletLandscape)}em;
   margin: ${getEmSize(50)}em auto;
-  padding: ${getEmSize(15)}em 0 ${getEmSize(30)}em ${getEmSize(30)}em;
+  padding: ${getEmSize(15)}em ${getEmSize(30)}em ${getEmSize(30)}em;
   transition: box-shadow 0.5s;
   background: ${colors.white};
   box-shadow: 0 8px 20px 0 ${colors.ivory.z3};
@@ -40,22 +40,14 @@ const StyledPaper = styled.div`
 
   @media (max-width: ${getEmSize(breakpoints.tabletPortrait)}em) {
     grid-template:
-      [row1-start] 'header sidebar' auto [row1-end]
-      [row2-start] 'primary sidebar' auto [row2-end]
-      [row3-start] 'secondary sidebar' auto [row3-end]
-      [row4-start] 'other sidebar' auto [row4-end]
-      / 1fr ${getEmSize(15)}em;
-  }
-
-  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
-    grid-template:
       [row1-start] 'header' auto [row1-end]
       [row2-start] 'primary' auto [row2-end]
       [row3-start] 'secondary' auto [row3-end]
       [row4-start] 'other' auto [row4-end]
-      [row5-start] 'sidebar' 0 [row5-end]
-      / 1fr ${getEmSize(15)}em;
-    grid-template-columns: 1fr;
+      / 1fr;
+  }
+
+  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
     margin: 0;
     padding: ${getEmSize(15)}em;
     text-align: center;
@@ -80,6 +72,5 @@ export const Paper: React.SFC<IPaperProps> = ({
     <div className={css({ gridArea: 'primary' })}>{primarySections}</div>
     <div className={css({ gridArea: 'secondary' })}>{secondarySections}</div>
     <div className={css({ gridArea: 'other' })}>{otherSections}</div>
-    <div className={css({ gridArea: 'sidebar', background: colors.gray.z9 })} />
   </StyledPaper>
 )

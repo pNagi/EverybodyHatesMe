@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
+import { Group } from './Group'
 import { IProject, Projects } from './Projects'
 import { Tags } from './Tags'
 
@@ -15,7 +16,7 @@ export interface IJob {
 }
 
 export const Job: React.SFC<{ job: IJob }> = ({ job }) => (
-  <React.Fragment>
+  <Group>
     <h4>
       {job.position}
       <a href={job.link} target="_blank">
@@ -26,5 +27,5 @@ export const Job: React.SFC<{ job: IJob }> = ({ job }) => (
     {job.tags && <Tags tags={job.tags} />}
     <span>{job.description}</span>
     {job.projects && <Projects projects={job.projects} />}
-  </React.Fragment>
+  </Group>
 )

@@ -2,6 +2,7 @@ import _ from 'lodash'
 import React from 'react'
 import styled from 'react-emotion'
 import { FaCode, FaGithub, FaInfoCircle } from 'react-icons/fa'
+import { Group } from './Group'
 import { Tags } from './Tags'
 
 const StyledLink = styled.a`
@@ -19,7 +20,7 @@ export interface IProject {
 export const Projects: React.SFC<{ projects: { [key: string]: IProject } }> = ({
   projects
 }) => (
-  <React.Fragment>
+  <Group>
     {_.map(projects, (project: IProject, key: string) => (
       <React.Fragment key={key}>
         <h5>
@@ -39,5 +40,5 @@ export const Projects: React.SFC<{ projects: { [key: string]: IProject } }> = ({
         <span>{project.description}</span>
       </React.Fragment>
     ))}
-  </React.Fragment>
+  </Group>
 )

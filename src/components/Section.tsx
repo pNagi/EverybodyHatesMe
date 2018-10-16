@@ -7,7 +7,6 @@ import { IProject, Projects } from './Projects'
 
 const StyledSection = styled.div`
   margin: 0.5em 0;
-  font-size: 0.8em;
 `
 
 export interface ISection {

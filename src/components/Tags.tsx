@@ -8,12 +8,14 @@ import { breakpoints, colors } from '../styles/variables'
 const StyledTags = styled.div`
   display: flex;
   flex-wrap: wrap;
+  max-width: 60vw;
   margin: 0.5em 0;
   color: ${colors.gray.z6};
-  font-size: 0.8em;
+  font-size: 0.9em;
 
   @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
     justify-content: center;
+    max-width: none;
   }
 `
 
