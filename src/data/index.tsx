@@ -38,7 +38,8 @@ export const resumeData: IResumeData = {
       projects: {
         final: {
           title: 'Senior Project: "Interact"',
-          description: 'Developed an UX analytic system.',
+          description:
+            "Developed an UX analytic system, where user can track, experiment and visualize the usage of user's website real-time.",
           github: 'https://github.com/TheInteract',
           tags: [
             'javascript',
@@ -140,7 +141,7 @@ export const resumeData: IResumeData = {
           to: 'August 2016',
           link: 'https://www.kit.ac.jp/en/',
           description:
-            'Joined "Software Engineer" lab and developed "GitQuest", a gamify git visualization website.',
+            'Joined `Software Engineer` lab and developed GitQuest, a gamify git visualization website.',
           projects: {
             gitQuest: {
               title: 'GitQuest',
