@@ -83,8 +83,14 @@ injectGlobal`
   }
 
   a {
-    color: inherit;
+    color: ${colors.ivory.z9};
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      transform: translateY(1em);
+      color: ${colors.ivory.z8};
+    }
   }
 
   p {
