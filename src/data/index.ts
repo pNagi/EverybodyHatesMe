@@ -1,11 +1,6 @@
-import { IconType } from 'react-icons'
 import { FaGithub, FaRegEnvelope } from 'react-icons/fa'
-import { ISection } from '../components'
-
-export interface IContact {
-  IconComponent: IconType
-  text: string
-}
+import { GoBrowser } from 'react-icons/go'
+import { IContact, ISection } from '../components'
 
 interface IResumeData {
   firstName: string
@@ -22,7 +17,7 @@ export const resumeData: IResumeData = {
   contacts: {
     email: { IconComponent: FaRegEnvelope, text: 'chonnipa.kit@gmail.com' },
     github: { IconComponent: FaGithub, text: 'github.com/pnagi' },
-    website: { IconComponent: FaGithub, text: 'pnagi.github.io' }
+    website: { IconComponent: GoBrowser, text: 'pnagi.github.io' }
   },
   primarySections: {
     aboutMe: {
