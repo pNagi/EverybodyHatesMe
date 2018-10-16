@@ -1,17 +1,27 @@
 import _ from 'lodash'
-import { IconType } from 'react-icons'
-
 import React from 'react'
 import styled from 'react-emotion'
+import { IconType } from 'react-icons'
+import { colors } from '../styles'
+import { getEmSize } from '../styles/mixins'
 
 export interface IContact {
   IconComponent: IconType
   text: string
 }
 
-const StyledContact = styled.h5`
-  margin-top: 1em;
-  letter-spacing: 5px;
+const StyledHeader = styled.div`
+  padding-bottom: ${getEmSize(30)}em;
+`
+
+const StyledContacts = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${colors.gray.z8};
+
+  > * {
+    margin-right: 1em;
+  }
 `
 
 export const Header: React.SFC<{
@@ -19,13 +29,18 @@ export const Header: React.SFC<{
   lastName: string
   contacts: { [key: string]: IContact }
 }> = ({ firstName, lastName, contacts }) => (
-  <React.Fragment>
-    <h1>{firstName}</h1>
-    <h2>{lastName}</h2>
-    {_.map(contacts, ({ IconComponent, text }: IContact, key: string) => (
-      <StyledContact key={key}>
-        <IconComponent /> {text}
-      </StyledContact>
-    ))}
-  </React.Fragment>
+  <StyledHeader>
+    <div>
+      <h1>{firstName}</h1>
+      <h2>{lastName}</h2>
+    </div>
+    <StyledContacts>
+      {_.map(contacts, ({ IconComponent, text }: IContact, key: string) => (
+        <React.Fragment key={key}>
+          <IconComponent />
+          <div>{text}</div>
+        </React.Fragment>
+      ))}
+    </StyledContacts>
+  </StyledHeader>
 )
