@@ -22,6 +22,11 @@ const StyledPaper = styled.div`
   background: ${colors.white};
   box-shadow: 0 8px 20px 0 ${colors.ivory.z3};
   user-select: none;
+
+  @media print {
+    margin: 0;
+    box-shadow: none;
+  }
 `
 
 interface IPaperProps {

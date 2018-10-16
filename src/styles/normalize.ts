@@ -12,9 +12,13 @@ injectGlobal`
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: ${colors.gray.z1};
+    background: ${colors.gray.z1};
     color: ${colors.gray.z8};
     font-family: ${fonts.body};
+
+    @media print {
+      background: none;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -63,13 +67,8 @@ injectGlobal`
   }
 
   a {
-    color: ${colors.ivory.z9};
+    color: inherit;
     text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: ${colors.ivory.z6};
-    }
   }
 
   p {
