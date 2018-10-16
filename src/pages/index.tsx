@@ -34,7 +34,7 @@ class IndexPage extends React.PureComponent {
           header={this.renderHeader()}
           primarySections={this.renderSections(resumeData.primarySections)}
           secondarySections={this.renderSections(resumeData.secondarySections)}
-          otherSections={this.renderSections(resumeData.sections)}
+          otherSections={this.renderSections(resumeData.otherSections)}
         />
       </PageLayout>
     )
