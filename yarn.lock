@@ -834,9 +834,13 @@
   version "0.3.29"
   resolved "http://registry.npmjs.org/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
 
-"@types/node@*", "@types/node@^10.11.7":
+"@types/node@*":
   version "10.11.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.7.tgz#0e75ca9357d646ca754016ca1d68a127ad7e7300"
+
+"@types/node@^10.12.0":
+  version "10.12.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.0.tgz#ea6dcbddbc5b584c83f06c60e82736d8fbb0c235"
 
 "@types/node@^7.0.11":
   version "7.10.0"
@@ -859,9 +863,16 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.4.16":
+"@types/react@*":
   version "16.4.16"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.16.tgz#99f91b1200ae8c2062030402006d3b3c3a177043"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.4.17":
+  version "16.4.17"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.17.tgz#a3b3bffe147b00dd22846eb6b0da23e18afa4b80"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -4236,9 +4247,9 @@ gatsby-react-router-scroll@^2.0.0:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@^2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.22.tgz#bbce1efd2993705be91b2c06ace1bb1d2183976a"
+gatsby@^2.0.24:
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.24.tgz#83231a0d11b4bac5f51327067afeab4f1307a4f6"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -7485,9 +7496,9 @@ react-hot-loader@^4.1.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
 
-react-icons@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.2.0.tgz#fc1bf36cb4d231d61d1aa1de3a6ba773d07e47d2"
+react-icons@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.2.1.tgz#6f7f9ccbeec05ff7076df070703e03238903ac30"
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
