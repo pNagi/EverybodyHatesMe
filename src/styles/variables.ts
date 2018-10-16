@@ -31,7 +31,7 @@ export const fonts = {
 }
 
 export const breakpoints = {
-  mobile: 425,
+  mobile: 525,
   tabletPortrait: 768,
   tabletLandscape: 1024,
   desktop: 1200

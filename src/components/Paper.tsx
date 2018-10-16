@@ -20,7 +20,7 @@ const StyledPaper = styled.div`
   height: ${PAPER_RATIO * 100}vw;
   max-height: ${PAPER_RATIO * getEmSize(breakpoints.tabletLandscape)}em;
   margin: ${getEmSize(50)}em auto;
-  padding: ${getEmSize(15)}em ${getEmSize(30)}em ${getEmSize(30)}em;
+  padding: ${getEmSize(20)}em ${getEmSize(60)}em ${getEmSize(60)}em;
   transition: box-shadow 0.5s;
   background: ${colors.white};
   box-shadow: 0 8px 20px 0 ${colors.ivory.z3};

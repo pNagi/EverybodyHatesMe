@@ -11,7 +11,7 @@ export interface IContact {
 }
 
 const StyledHeader = styled.div`
-  padding-bottom: ${getEmSize(30)}em;
+  padding-bottom: ${getEmSize(20)}em;
 `
 
 const StyledContacts = styled.div`
