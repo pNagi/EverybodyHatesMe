@@ -1,6 +1,5 @@
 import _ from 'lodash'
 import React from 'react'
-import styled from 'react-emotion'
 import { IProject, Projects } from './Projects'
 import { Tags } from './Tags'
 
