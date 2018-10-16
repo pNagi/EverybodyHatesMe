@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React from 'react'
 import styled from 'react-emotion'
 import { IconType } from 'react-icons'
-import { colors } from '../styles'
+import { breakpoints, colors } from '../styles'
 import { getEmSize } from '../styles/mixins'
 
 export interface IContact {
@@ -16,11 +16,27 @@ const StyledHeader = styled.div`
 
 const StyledContacts = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: ${getEmSize(breakpoints.mobile)}em) {
+    > * {
+      margin-right: 1em;
+    }
+  }
+
+  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+    flex-direction: column;
+  }
+`
+
+const StyledContact = styled.div`
+  display: flex;
   align-items: center;
   color: ${colors.gray.z8};
 
-  > * {
-    margin-right: 1em;
+  > *:first-child {
+    margin-right: 0.5em;
   }
 `
 
@@ -36,10 +52,10 @@ export const Header: React.SFC<{
     </div>
     <StyledContacts>
       {_.map(contacts, ({ IconComponent, text }: IContact, key: string) => (
-        <React.Fragment key={key}>
+        <StyledContact key={key}>
           <IconComponent />
           <div>{text}</div>
-        </React.Fragment>
+        </StyledContact>
       ))}
     </StyledContacts>
   </StyledHeader>
