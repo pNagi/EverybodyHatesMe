@@ -48,8 +48,7 @@ export const resumeData: IResumeData = {
             'mongodb',
             'docker',
             'kubernetes',
-            'google cloud platform',
-            '++'
+            'google cloud platform'
           ]
         }
       }
@@ -92,7 +91,7 @@ export const resumeData: IResumeData = {
               ]
             }
           },
-          tags: ['typescript', 'react', 'redux', 'node.js', 'mongodb', '++']
+          tags: ['typescript', 'react', 'redux', 'node.js', 'mongodb']
         },
         twPartTime: {
           position: 'Part-time Software Engineer',
@@ -102,7 +101,7 @@ export const resumeData: IResumeData = {
           link: 'https://taskworld.com',
           description:
             'Maintained a task management software and participated in features development.',
-          tags: ['javascript', 'react', 'redux', 'node.js', 'mongodb', '++']
+          tags: ['javascript', 'react', 'redux', 'node.js', 'mongodb']
         },
         twIntern: {
           position: 'Software Engineer Intern',
@@ -129,7 +128,7 @@ export const resumeData: IResumeData = {
                 'https://medium.com/taskworld-blog/feast-your-eyes-on-taskworlds-stunning-new-look-66138eb208e'
             }
           },
-          tags: ['javascript', 'react', 'redux', 'node.js', 'mongodb', '++']
+          tags: ['javascript', 'react', 'redux', 'node.js', 'mongodb']
         },
         kitLabIntern: {
           position: 'Software Engineer Lab Intern',
