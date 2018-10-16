@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaGithub, FaRegEnvelope } from 'react-icons/fa'
 import { GoBrowser } from 'react-icons/go'
 import { IContact, ISection } from '../components'
@@ -27,11 +28,13 @@ export const resumeData: IResumeData = {
     },
     education: {
       title: 'Education',
-      description: `
-        2013 - 2017
-        Kasetsart University
-        B.Eng. Software & Knowledge Engineering
-      `,
+      description: (
+        <React.Fragment>
+          <div>2013 - 2017</div>
+          <strong>Kasetsart University</strong>
+          <div>B.Eng. Software & Knowledge Engineering</div>
+        </React.Fragment>
+      ),
       projects: {
         final: {
           title: 'Senior Project: "Interact"',

@@ -11,7 +11,7 @@ const StyledSection = styled.div`
 
 export interface ISection {
   title: string
-  description?: string
+  description?: React.ReactNode | string
   jobs?: { [key: string]: IJob }
   projects?: { [key: string]: IProject }
 }
