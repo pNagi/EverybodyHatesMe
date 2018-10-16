@@ -33,7 +33,7 @@ const StyledContacts = styled.div`
 const StyledContact = styled.div`
   display: flex;
   align-items: center;
-  color: ${colors.gray.z8};
+  color: ${colors.ivory.z8};
 
   > *:first-child {
     margin-right: 0.5em;

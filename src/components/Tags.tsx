@@ -10,7 +10,7 @@ const StyledTags = styled.div`
   flex-wrap: wrap;
   max-width: 60vw;
   margin: 0.5em 0;
-  color: ${colors.gray.z6};
+  color: ${colors.ivory.z7};
   font-size: 0.9em;
 
   @media (max-width: ${getEmSize(breakpoints.mobile)}em) {

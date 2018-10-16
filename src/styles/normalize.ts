@@ -76,7 +76,7 @@ injectGlobal`
   }
   h6 {
     margin-right: -3px;
-    color: ${colors.ivory.z5};
+    color: ${colors.ivory.z6};
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 3px;
