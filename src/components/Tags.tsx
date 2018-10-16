@@ -2,7 +2,8 @@ import _ from 'lodash'
 
 import React from 'react'
 import styled from 'react-emotion'
-import { colors } from '../styles/variables'
+import { getEmSize } from '../styles/mixins'
+import { breakpoints, colors } from '../styles/variables'
 
 const StyledTags = styled.div`
   display: flex;
@@ -10,6 +11,10 @@ const StyledTags = styled.div`
   margin: 0.5em 0;
   color: ${colors.gray.z6};
   font-size: 0.8em;
+
+  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+    justify-content: center;
+  }
 `
 
 const StyledTag = styled.div`

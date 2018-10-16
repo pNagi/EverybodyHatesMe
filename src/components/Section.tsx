@@ -15,7 +15,6 @@ export interface ISection {
   description?: string
   jobs?: { [key: string]: IJob }
   projects?: { [key: string]: IProject }
-  right?: boolean
 }
 
 export const Section: React.SFC<{ section: ISection }> = ({ section }) => (

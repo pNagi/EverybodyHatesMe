@@ -6,17 +6,10 @@ import { IContact, resumeData } from '../data'
 import { PageLayout } from '../layouts'
 
 class IndexPage extends React.PureComponent {
-  public renderSections = (
-    sections: { [key: string]: ISection },
-    options: { right?: boolean }
-  ) =>
-    _.map(
-      sections,
-      (section: ISection, key: string) =>
-        !!section.right === options.right ? (
-          <Section key={key} section={section} />
-        ) : null
-    )
+  public renderSections = (sections: { [key: string]: ISection }) =>
+    _.map(sections, (section: ISection, key: string) => (
+      <Section key={key} section={section} />
+    ))
 
   public renderHeader = () => (
     <React.Fragment>
@@ -39,12 +32,9 @@ class IndexPage extends React.PureComponent {
       <PageLayout>
         <Paper
           header={this.renderHeader()}
-          leftColumn={this.renderSections(resumeData.sections, {
-            right: false
-          })}
-          rightColumn={this.renderSections(resumeData.sections, {
-            right: true
-          })}
+          primarySections={this.renderSections(resumeData.primarySections)}
+          secondarySections={this.renderSections(resumeData.secondarySections)}
+          otherSections={this.renderSections(resumeData.sections)}
         />
       </PageLayout>
     )

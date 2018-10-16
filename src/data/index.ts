@@ -11,7 +11,9 @@ interface IResumeData {
   firstName: string
   lastName: string
   contacts: { [key: string]: IContact }
-  sections: { [key: string]: ISection }
+  primarySections: { [key: string]: ISection }
+  secondarySections: { [key: string]: ISection }
+  otherSections: { [key: string]: ISection }
 }
 
 export const resumeData: IResumeData = {
@@ -22,11 +24,11 @@ export const resumeData: IResumeData = {
     github: { IconComponent: FaGithub, text: 'github.com/pnagi' },
     website: { IconComponent: FaGithub, text: 'pnagi.github.io' }
   },
-  sections: {
+  primarySections: {
     aboutMe: {
       title: 'About Me',
       description:
-        'Creative software engineer passionate in developing functional and beautiful inside out software, eager to lean new things and love listening to music'
+        'Creative software engineer passionate in developing functional and beautiful inside out software. Eager to lean new things and love listening to music.'
     },
     education: {
       title: 'Education',
@@ -38,7 +40,7 @@ export const resumeData: IResumeData = {
       projects: {
         final: {
           title: 'Senior Project: "Interact"',
-          description: 'Developed an UX analytic system',
+          description: 'Developed an UX analytic system.',
           github: 'https://github.com/TheInteract',
           tags: [
             'javascript',
@@ -56,7 +58,9 @@ export const resumeData: IResumeData = {
           ]
         }
       }
-    },
+    }
+  },
+  secondarySections: {
     experiences: {
       title: 'Experiences',
       jobs: {
@@ -67,7 +71,7 @@ export const resumeData: IResumeData = {
           to: 'Present',
           link: 'https://taskworld.com',
           description:
-            'Maintained a task management software, improved existed features, added features, and reduced technical debt',
+            'Maintained a task management software, improved existed features, added features, and reduced technical debt.',
           projects: {
             search: {
               title: 'Dedicate search page & New design of global search',
@@ -102,7 +106,7 @@ export const resumeData: IResumeData = {
           to: 'May 2017',
           link: 'https://taskworld.com',
           description:
-            'Maintained a task management software and participated in features development',
+            'Maintained a task management software and participated in features development.',
           tags: ['javascript', 'react', 'redux', 'node.js', 'mongodb', '++']
         },
         twIntern: {
@@ -112,7 +116,7 @@ export const resumeData: IResumeData = {
           to: 'December 2016',
           link: 'https://taskworld.com',
           description:
-            'Maintained a task management software and participated in features development',
+            'Maintained a task management software and added features.',
           projects: {
             background: {
               title: 'Background Selection',
@@ -139,7 +143,7 @@ export const resumeData: IResumeData = {
           to: 'August 2016',
           link: 'https://www.kit.ac.jp/en/',
           description:
-            'Joined "Software Engineer" lab and developed "GitQuest" project',
+            'Joined "Software Engineer" lab and developed "GitQuest", a gamify git visualization website.',
           projects: {
             gitQuest: {
               title: 'GitQuest',
@@ -155,7 +159,7 @@ export const resumeData: IResumeData = {
           to: 'July 2015',
           link: 'https://www.wongnai.com/',
           description:
-            'Developed internal tools, joined core team and maintained core product',
+            'Developed internal tools, joined core team and maintained core product.',
           tags: [
             'shell script',
             'imagemagick',
@@ -166,16 +170,17 @@ export const resumeData: IResumeData = {
             'spring mvc'
           ]
         }
-      },
-      right: true
-    },
+      }
+    }
+  },
+  otherSections: {
     contribution: {
       title: 'Contribution',
       projects: {
         reactBkk: {
           title: 'React Bangkok 3.0.0',
           description:
-            'Volunteered to design and cooperated in frontend site development',
+            'Volunteered to design and cooperated in frontend site development.',
           github: 'https://github.com/reactbkk/3.0.0',
           tags: ['javascript', 'react', 'emotion']
         }
@@ -186,7 +191,7 @@ export const resumeData: IResumeData = {
       projects: {
         pizza: {
           title: 'Pizza Hackathon 2018',
-          description: 'Joined and won 1st prize (Gitthereum Team)',
+          description: 'Joined and won 1st prize as part of Gitthereum team.',
           link:
             'https://medium.com/@peawyoyoyin/gitthereum-transforming-git-into-a-working-blockchain-538df6617ac6',
           github: 'https://github.com/gitthereum',
@@ -195,7 +200,7 @@ export const resumeData: IResumeData = {
         barcamp: {
           title: 'Barcamp Bangkhen 2015',
           description:
-            'Volunteered to lead the event, set up design concept, done design stuff and cooperated in website development',
+            'Volunteered to lead the event, set up design concept, done design stuff and cooperated in website development.',
           link: 'http://2015.barcampbangkhen.org',
           github: 'https://github.com/chinclubi/bcbk-frontend',
           tags: ['javascript', 'angular', 'css']

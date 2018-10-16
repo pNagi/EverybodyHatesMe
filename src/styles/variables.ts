@@ -30,11 +30,14 @@ export const fonts = {
   header: '"Oswald", sans-serif'
 }
 
-export const breakpoints = { xs: 0, sm: 576, md: 768, lg: 992, xl: 1200 }
-
-export const widths = { md: 720, lg: 960, xl: 1140 }
+export const breakpoints = {
+  mobile: 425,
+  tablet: 768,
+  tabletLandscape: 1024,
+  desktop: 1200
+}
 
 export const dimensions = {
-  fontSize: { large: 18, regular: 16 },
+  fontSize: { regular: 16 },
   lineHeight: { heading: 1.2, regular: 1.5 }
 }

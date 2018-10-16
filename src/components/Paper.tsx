@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { css } from 'react-emotion'
 import { getEmSize } from '../styles/mixins'
-import { colors, widths } from '../styles/variables'
+import { breakpoints, colors } from '../styles/variables'
 
 const PAPER_RATIO: number = 1.414
 const GOLDEN_RATIO: number = 1.61803398875
@@ -11,14 +11,17 @@ const StyledPaper = styled.div`
   position: relative;
   grid-gap: ${getEmSize(15)}em ${getEmSize(30)}em;
   grid-template:
-    [row1-start] 'header header' auto [row1-end] [row2-start]
-    'left-col right-col' auto [row2-end] / 1fr ${GOLDEN_RATIO}fr;
+    [row1-start] 'header header' auto [row1-end]
+    [row2-start] 'primary secondary' auto [row2-end]
+    [row3-start] 'other secondary' 1fr [row3-end]
+    / 1fr ${GOLDEN_RATIO}fr;
   width: 100vw;
-  max-width: ${getEmSize(widths.lg)}em;
+  max-width: ${getEmSize(breakpoints.tabletLandscape)}em;
   height: ${PAPER_RATIO * 100}vw;
-  max-height: ${PAPER_RATIO * getEmSize(widths.lg)}em;
+  max-height: ${PAPER_RATIO * getEmSize(breakpoints.tabletLandscape)}em;
   margin: ${getEmSize(50)}em auto;
   padding: ${getEmSize(15)}em ${getEmSize(30)}em;
+  transition: box-shadow 0.5s;
   background: ${colors.white};
   box-shadow: 0 8px 20px 0 ${colors.ivory.z3};
   user-select: none;
@@ -27,22 +30,47 @@ const StyledPaper = styled.div`
     margin: 0;
     box-shadow: none;
   }
+
+  @media (max-width: ${getEmSize(breakpoints.tabletLandscape)}em) {
+    height: auto;
+    min-height: calc(100vh - ${getEmSize(100)}em);
+    max-height: none;
+    box-shadow: 0 0 40px 30px ${colors.white};
+  }
+
+  @media (max-width: ${getEmSize(breakpoints.tablet)}em) {
+    grid-template:
+      [row1-start] 'header' auto [row1-end]
+      [row2-start] 'primary' auto [row2-end]
+      [row3-start] 'secondary' auto [row3-end]
+      [row4-start] 'other' auto [row4-end]
+      / 1fr;
+  }
+
+  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+    margin: 0;
+    padding: ${getEmSize(15)}em;
+    text-align: center;
+  }
 `
 
 interface IPaperProps {
   header: React.ReactNode
-  leftColumn: React.ReactNode
-  rightColumn: React.ReactNode
+  primarySections: React.ReactNode
+  secondarySections: React.ReactNode
+  otherSections: React.ReactNode
 }
 
 export const Paper: React.SFC<IPaperProps> = ({
   header,
-  leftColumn,
-  rightColumn
+  primarySections,
+  secondarySections,
+  otherSections
 }) => (
   <StyledPaper>
     <div className={css({ gridArea: 'header' })}>{header}</div>
-    <div className={css({ gridArea: 'left-col' })}>{leftColumn}</div>
-    <div className={css({ gridArea: 'right-col' })}>{rightColumn}</div>
+    <div className={css({ gridArea: 'primary' })}>{primarySections}</div>
+    <div className={css({ gridArea: 'secondary' })}>{secondarySections}</div>
+    <div className={css({ gridArea: 'other' })}>{otherSections}</div>
   </StyledPaper>
 )

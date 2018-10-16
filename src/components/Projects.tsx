@@ -24,14 +24,14 @@ export const Projects: React.SFC<{ projects: { [key: string]: IProject } }> = ({
       <React.Fragment key={key}>
         <h5>
           <FaCode /> {project.title}{' '}
-          {project.link && (
-            <StyledLink href={project.link} target="_blank">
-              <FaInfoCircle />
-            </StyledLink>
-          )}{' '}
           {project.github && (
             <StyledLink href={project.github} target="_blank">
               <FaGithub />
+            </StyledLink>
+          )}{' '}
+          {project.link && (
+            <StyledLink href={project.link} target="_blank">
+              <FaInfoCircle />
             </StyledLink>
           )}
         </h5>
