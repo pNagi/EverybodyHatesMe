@@ -8,7 +8,7 @@ export const Group = styled.div`
   padding-left: ${getEmSize(32)}em;
   border-left: 1px solid ${colors.ivory.z4};
 
-  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+  @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
     margin: ${getEmSize(30)}em 0 0;
     padding-left: 0;
     border: none;

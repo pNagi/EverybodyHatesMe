@@ -25,7 +25,7 @@ const StyledContacts = styled.div`
     }
   }
 
-  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+  @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
     flex-direction: column;
   }
 `

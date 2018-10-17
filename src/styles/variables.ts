@@ -38,6 +38,6 @@ export const breakpoints = {
 }
 
 export const dimensions = {
-  fontSize: { regular: 16 },
+  fontSize: { print: 12, regular: 16 },
   lineHeight: { heading: 1.2, regular: 1.5 }
 }

@@ -5,8 +5,12 @@ import { breakpoints, colors, dimensions, fonts } from './variables'
 // tslint:disable-next-line:no-unused-expression
 injectGlobal`
   html {
-    font-size: ${dimensions.fontSize.regular}px !important;
+    font-size: ${dimensions.fontSize.regular}px;
     line-height: ${dimensions.lineHeight.regular} !important;
+
+    @media print {
+      font-size: ${dimensions.fontSize.print}px;
+    }
   }
 
   body {
@@ -44,7 +48,7 @@ injectGlobal`
     font-size: 3.6rem;
     letter-spacing: 10px;
 
-    @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+    @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
       font-size: 2.4rem;
     }
   }
@@ -54,7 +58,7 @@ injectGlobal`
     font-weight: 400;
     letter-spacing: 10px;
 
-    @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+    @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
       font-size: 1.2em;
     }
   }
@@ -96,5 +100,10 @@ injectGlobal`
   p {
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
   }
 `

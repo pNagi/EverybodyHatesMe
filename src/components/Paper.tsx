@@ -20,25 +20,25 @@ const StyledPaper = styled.div`
   height: ${PAPER_RATIO * 100}vw;
   max-height: ${PAPER_RATIO * getEmSize(breakpoints.tabletLandscape)}em;
   margin: ${getEmSize(50)}em auto;
-  padding: ${getEmSize(20)}em ${getEmSize(60)}em ${getEmSize(60)}em;
+  padding: ${getEmSize(25)}em ${getEmSize(60)}em ${getEmSize(60)}em;
   transition: box-shadow 0.5s;
   background: ${colors.white};
   box-shadow: 0 8px 20px 0 ${colors.ivory.z3};
   user-select: none;
 
   @media print {
-    margin: 0;
+    margin: 0 auto;
     box-shadow: none;
   }
 
-  @media (max-width: ${getEmSize(breakpoints.tabletLandscape)}em) {
+  @media screen and (max-width: ${getEmSize(breakpoints.tabletLandscape)}em) {
     height: auto;
     min-height: calc(100vh - ${getEmSize(100)}em);
     max-height: none;
     box-shadow: 0 0 40px 30px ${colors.white};
   }
 
-  @media (max-width: ${getEmSize(breakpoints.tabletPortrait)}em) {
+  @media screen and (max-width: ${getEmSize(breakpoints.tabletPortrait)}em) {
     grid-template:
       [row1-start] 'header' auto [row1-end]
       [row2-start] 'primary' auto [row2-end]
@@ -47,7 +47,7 @@ const StyledPaper = styled.div`
       / 1fr;
   }
 
-  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+  @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
     margin: 0;
     padding: ${getEmSize(15)}em;
     text-align: center;

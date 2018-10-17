@@ -13,7 +13,7 @@ const StyledTags = styled.div`
   color: ${colors.ivory.z7};
   font-size: 0.9em;
 
-  @media (max-width: ${getEmSize(breakpoints.mobile)}em) {
+  @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
     justify-content: center;
     max-width: none;
   }
