@@ -1,6 +1,7 @@
 import React from 'react'
-import { FaGithub, FaRegEnvelope } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaRegEnvelope } from 'react-icons/fa'
 import { GoBrowser } from 'react-icons/go'
+import { MdContentCopy } from 'react-icons/md'
 import { IContact, ISection } from '../components'
 
 interface IResumeData {
@@ -16,9 +17,22 @@ export const resumeData: IResumeData = {
   firstName: 'Chonnipa',
   lastName: 'Kittisiriprasert',
   contacts: {
-    email: { IconComponent: FaRegEnvelope, text: 'chonnipa.kit@gmail.com' },
-    github: { IconComponent: FaGithub, text: 'github.com/pnagi' },
-    website: { IconComponent: GoBrowser, text: 'pnagi.github.io' }
+    email: {
+      IconComponent: FaRegEnvelope,
+      text: 'chonnipa.kit@gmail.com',
+      ActionIconComponent: MdContentCopy
+    },
+    github: {
+      IconComponent: FaGithub,
+      text: 'github.com/pnagi',
+      ActionIconComponent: FaExternalLinkAlt,
+      link: 'https://github.com/pnagi'
+    },
+    website: {
+      IconComponent: GoBrowser,
+      text: 'pnagi.github.io',
+      tip: 'You are here!'
+    }
   },
   primarySections: {
     aboutMe: {
@@ -160,7 +174,6 @@ export const resumeData: IResumeData = {
             'Developed internal tools, joined core team and maintained core product.',
           tags: [
             'shell script',
-            'imagemagick',
             'backbone',
             'google maps api',
             'less',

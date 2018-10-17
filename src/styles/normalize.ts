@@ -92,7 +92,6 @@ injectGlobal`
 
     &:hover,
     &:focus {
-      transform: translateY(1em);
       color: ${colors.ivory.z8};
     }
   }
@@ -104,6 +103,6 @@ injectGlobal`
 
   @page {
     size: A4;
-    margin: 0;
+    margin: 0.2in 0 0.1in;
   }
 `

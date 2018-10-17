@@ -6,9 +6,7 @@ import { IJob, Job } from './Job'
 import { IProject, Projects } from './Projects'
 
 const StyledSection = styled.div`
-  & + & {
-    padding-top: 1em;
-  }
+  padding-top: 1em;
 `
 
 export interface ISection {
