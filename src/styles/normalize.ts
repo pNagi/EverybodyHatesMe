@@ -44,46 +44,46 @@ injectGlobal`
   h1 {
     margin-top: 0.5rem;
     /* TODO: letter-spaceing + margin-right mixins or better solution to last letter spacing */
-    margin-right: -10px;
+    margin-right: -${getEmSize(10)}rem;
     font-size: 3.6rem;
-    letter-spacing: 10px;
+    letter-spacing: ${getEmSize(10)}rem;
 
     @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
       font-size: 2.4rem;
     }
   }
   h2 {
-    margin-right: -10px;
+    margin-right: -${getEmSize(10)}rem;
     font-size: 2.4rem;
     font-weight: 400;
-    letter-spacing: 10px;
+    letter-spacing: ${getEmSize(10)}rem;
 
     @media screen and (max-width: ${getEmSize(breakpoints.mobile)}em) {
       font-size: 1.2em;
     }
   }
   h3 {
-    margin-right: -5px;
+    margin-right: -${getEmSize(5)}rem;
     font-size: 1.2rem;
-    letter-spacing: 5px;
+    letter-spacing: ${getEmSize(5)}rem;
   }
   h4 {
-    margin-right: -2px;
+    margin-right: -${getEmSize(2)}rem;
     font-size: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: ${getEmSize(2)}rem;
   }
   h5 {
-    margin-right: -2px;
+    margin-right: -${getEmSize(2)}rem;
     font-size: 0.9rem;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: ${getEmSize(2)}rem;
   }
   h6 {
-    margin-right: -3px;
+    margin-right: -${getEmSize(3)}rem;
     color: ${colors.ivory.z6};
     font-size: 0.75rem;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: ${getEmSize(3)}rem;
   }
 
   a {
