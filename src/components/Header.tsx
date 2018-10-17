@@ -1,10 +1,10 @@
 import _ from 'lodash'
 import React from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled from 'react-emotion'
 import { IconType } from 'react-icons'
 import { breakpoints, colors } from '../styles'
 import { getEmSize } from '../styles/mixins'
-
 export interface IContact {
   IconComponent: IconType
   text: string
@@ -23,7 +23,7 @@ const StyledContacts = styled.div`
   }
 `
 
-const StyledContact = styled.div<{ email: boolean }>`
+const StyledContact = styled.div<{ copyable: boolean }>`
   display: flex;
   position: relative;
   align-items: center;
@@ -31,7 +31,7 @@ const StyledContact = styled.div<{ email: boolean }>`
   padding: ${getEmSize(5)}em;
   color: ${colors.ivory.z8};
   letter-spacing: ${getEmSize(1)}em;
-  user-select: ${props => (props.email ? 'all' : 'none')};
+  user-select: ${props => (props.copyable ? 'all' : 'none')};
 
   &:hover {
     background: ${colors.ivory.z2};
@@ -79,8 +79,9 @@ export const Header: React.SFC<{
           { IconComponent, text, link, ActionIconComponent, tip }: IContact,
           key: string
         ) => {
+          const copyable = key === 'email'
           const content = (
-            <StyledContact key={key} email={key === 'email'}>
+            <StyledContact key={key} copyable={copyable}>
               <IconComponent />
               <div>{text}</div>
               {ActionIconComponent ? (
@@ -91,13 +92,18 @@ export const Header: React.SFC<{
             </StyledContact>
           )
 
-          return link ? (
-            <a href={link} target="_blank">
-              {content}
-            </a>
-          ) : (
-            content
-          )
+          if (link) {
+            return (
+              <a href={link} target="_blank">
+                {content}
+              </a>
+            )
+          }
+          if (copyable) {
+            return <CopyToClipboard text={text}>{content}</CopyToClipboard>
+          }
+
+          return content
         }
       )}
     </StyledContacts>
