@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-favicon',
     'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-google-fonts',
