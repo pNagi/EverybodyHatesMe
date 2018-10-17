@@ -22,7 +22,8 @@ export const colors = {
     z8: '#555551',
     z9: '#2e2e2c'
   },
-  white: '#fff'
+  white: '#fff',
+  amber: '#ffcf56'
 }
 
 export const fonts = {

@@ -87,18 +87,22 @@ injectGlobal`
   }
 
   a {
-    color: ${colors.ivory.z9};
+    color: ${colors.ivory.z8};
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: ${colors.ivory.z8};
+      color: ${colors.ivory.z9};
     }
   }
 
   p {
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+
+  ::selection {
+    background: ${colors.amber};
   }
 
   @page {

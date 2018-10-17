@@ -24,7 +24,7 @@ const StyledTag = styled.div`
   padding: 0 0.5em;
   background: ${colors.gray.z2};
   box-shadow: 0 1px 0 1px ${colors.ivory.z4};
-  cursor: default;
+  user-select: none;
 `
 
 export const Tags: React.SFC<{ tags: string[] }> = ({ tags }) => (

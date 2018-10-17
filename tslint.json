@@ -14,7 +14,8 @@
         "lodash": "_",
         "react": "React",
         "reactHelmet": "Helmet",
-        "reactEmotion": "styled"
+        "reactEmotion": "styled",
+        "reactCopyToClipboard": "CopyToClipboard"
       }
     ],
     "jsx-curly-spacing": "always",

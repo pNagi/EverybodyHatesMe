@@ -24,7 +24,7 @@ const StyledPaper = styled.div`
   transition: box-shadow 0.5s;
   background: ${colors.white};
   box-shadow: 0 8px 20px 0 ${colors.ivory.z3};
-  user-select: none;
+  cursor: default;
 
   @media print {
     margin: 0 auto;
