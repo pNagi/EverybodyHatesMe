@@ -2,7 +2,8 @@ import React from "react"
 import { FaExternalLinkAlt, FaGithub, FaRegEnvelope } from "react-icons/fa"
 import { GoBrowser } from "react-icons/go"
 import { MdContentCopy } from "react-icons/md"
-import { IContact, ISection } from "../components"
+import { IContact } from "./Header"
+import { ISection } from "./Section"
 
 interface IResumeData {
   firstName: string
@@ -13,7 +14,7 @@ interface IResumeData {
   otherSections: { [key: string]: ISection }
 }
 
-export const resumeData: IResumeData = {
+export const data: IResumeData = {
   firstName: "Chonnipa",
   lastName: "Kittisiriprasert",
   contacts: {

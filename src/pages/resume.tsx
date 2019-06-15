@@ -1,8 +1,7 @@
 import _ from "lodash"
 import React from "react"
 
-import { Header, ISection, Paper, Section } from "../components"
-import { resumeData } from "../data"
+import { data, Header, ISection, Paper, Section } from "../xn-resume"
 import { PageLayout } from "../layouts"
 
 class ResumePage extends React.PureComponent {
@@ -13,9 +12,9 @@ class ResumePage extends React.PureComponent {
 
   public renderHeader = () => (
     <Header
-      firstName={resumeData.firstName}
-      lastName={resumeData.lastName}
-      contacts={resumeData.contacts}
+      firstName={data.firstName}
+      lastName={data.lastName}
+      contacts={data.contacts}
     />
   )
 
@@ -24,9 +23,9 @@ class ResumePage extends React.PureComponent {
       <PageLayout>
         <Paper
           header={this.renderHeader()}
-          primarySections={this.renderSections(resumeData.primarySections)}
-          secondarySections={this.renderSections(resumeData.secondarySections)}
-          otherSections={this.renderSections(resumeData.otherSections)}
+          primarySections={this.renderSections(data.primarySections)}
+          secondarySections={this.renderSections(data.secondarySections)}
+          otherSections={this.renderSections(data.otherSections)}
         />
       </PageLayout>
     )
