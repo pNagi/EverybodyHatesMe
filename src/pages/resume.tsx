@@ -1,7 +1,7 @@
 import _ from "lodash"
 import React from "react"
 
-import { data, Header, ISection, Paper, Section } from "../xn-resume"
+import { data, Styles, Header, ISection, Paper, Section } from "../xn-resume"
 import { PageLayout } from "../layouts"
 
 class ResumePage extends React.PureComponent {
@@ -10,19 +10,18 @@ class ResumePage extends React.PureComponent {
       <Section key={key} section={section} />
     ))
 
-  public renderHeader = () => (
-    <Header
-      firstName={data.firstName}
-      lastName={data.lastName}
-      contacts={data.contacts}
-    />
-  )
-
   public render() {
     return (
       <PageLayout>
+        <Styles />
         <Paper
-          header={this.renderHeader()}
+          header={
+            <Header
+              firstName={data.firstName}
+              lastName={data.lastName}
+              contacts={data.contacts}
+            />
+          }
           primarySections={this.renderSections(data.primarySections)}
           secondarySections={this.renderSections(data.secondarySections)}
           otherSections={this.renderSections(data.otherSections)}
