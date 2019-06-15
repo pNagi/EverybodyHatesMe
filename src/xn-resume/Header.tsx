@@ -44,7 +44,7 @@ const StyledContact = styled.div<{ copyable?: boolean }>`
     right: 0.5em;
   }
 
-  &:not(:hover) > *:nth-of-type(3) {
+  &:not(:hover) > *:last-child {
     visibility: hidden;
   }
 
