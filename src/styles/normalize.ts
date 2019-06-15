@@ -1,6 +1,6 @@
-import { injectGlobal } from 'emotion'
-import { getEmSize } from './mixins'
-import { breakpoints, colors, dimensions, fonts } from './variables'
+import { injectGlobal } from "emotion"
+import { getEmSize } from "./mixins"
+import { breakpoints, colors, dimensions, fonts } from "./variables"
 
 // tslint:disable-next-line:no-unused-expression
 injectGlobal`

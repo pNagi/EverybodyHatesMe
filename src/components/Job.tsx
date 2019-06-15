@@ -1,8 +1,8 @@
-import _ from 'lodash'
-import React from 'react'
-import { Group } from './Group'
-import { IProject, Projects } from './Projects'
-import { Tags } from './Tags'
+import _ from "lodash"
+import React from "react"
+import { Group } from "./Group"
+import { IProject, Projects } from "./Projects"
+import { Tags } from "./Tags"
 
 export interface IJob {
   position: string

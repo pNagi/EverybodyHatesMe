@@ -1,9 +1,9 @@
-import _ from 'lodash'
+import _ from "lodash"
 
-import React from 'react'
-import styled from 'react-emotion'
-import { IJob, Job } from './Job'
-import { IProject, Projects } from './Projects'
+import React from "react"
+import styled from "react-emotion"
+import { IJob, Job } from "./Job"
+import { IProject, Projects } from "./Projects"
 
 const StyledSection = styled.div`
   padding-top: 1em;

@@ -1,9 +1,9 @@
-import _ from 'lodash'
+import _ from "lodash"
 
-import React from 'react'
-import styled from 'react-emotion'
-import { getEmSize } from '../styles/mixins'
-import { breakpoints, colors } from '../styles/variables'
+import React from "react"
+import styled from "react-emotion"
+import { getEmSize } from "../styles/mixins"
+import { breakpoints, colors } from "../styles/variables"
 
 const StyledTags = styled.div`
   display: flex;

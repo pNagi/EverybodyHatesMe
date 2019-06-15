@@ -1,9 +1,9 @@
-import _ from 'lodash'
-import React from 'react'
+import _ from "lodash"
+import React from "react"
 
-import { Header, ISection, Paper, Section } from '../components'
-import { resumeData } from '../data'
-import { PageLayout } from '../layouts'
+import { Header, ISection, Paper, Section } from "../components"
+import { resumeData } from "../data"
+import { PageLayout } from "../layouts"
 
 class IndexPage extends React.PureComponent {
   public renderSections = (sections: { [key: string]: ISection }) =>
