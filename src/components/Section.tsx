@@ -1,7 +1,6 @@
+import styled from "@emotion/styled"
 import _ from "lodash"
-
 import React from "react"
-import styled from "react-emotion"
 import { IJob, Job } from "./Job"
 import { IProject, Projects } from "./Projects"
 

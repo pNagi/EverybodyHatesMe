@@ -1,7 +1,7 @@
+import styled from "@emotion/styled"
 import _ from "lodash"
 import React from "react"
 import CopyToClipboard from "react-copy-to-clipboard"
-import styled from "react-emotion"
 import { IconType } from "react-icons"
 import { breakpoints, colors } from "../styles"
 import { getEmSize } from "../styles/mixins"
@@ -44,7 +44,7 @@ const StyledContact = styled.div<{ copyable?: boolean }>`
     right: 0.5em;
   }
 
-  &:not(:hover) > *:nth-child(3) {
+  &:not(:hover) > *:nth-of-type(3) {
     visibility: hidden;
   }
 

@@ -1,7 +1,6 @@
+import styled from "@emotion/styled"
 import _ from "lodash"
-
 import React from "react"
-import styled from "react-emotion"
 import { getEmSize } from "../styles/mixins"
 import { breakpoints, colors } from "../styles/variables"
 

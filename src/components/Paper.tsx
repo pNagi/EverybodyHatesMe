@@ -1,5 +1,6 @@
+import "@emotion/core"
+import styled from "@emotion/styled"
 import * as React from "react"
-import styled, { css } from "react-emotion"
 import { getEmSize } from "../styles/mixins"
 import { breakpoints, colors } from "../styles/variables"
 
@@ -68,9 +69,9 @@ export const Paper: React.SFC<IPaperProps> = ({
   otherSections
 }) => (
   <StyledPaper>
-    <div className={css({ gridArea: "header" })}>{header}</div>
-    <div className={css({ gridArea: "primary" })}>{primarySections}</div>
-    <div className={css({ gridArea: "secondary" })}>{secondarySections}</div>
-    <div className={css({ gridArea: "other" })}>{otherSections}</div>
+    <div css={{ gridArea: "header" }}>{header}</div>
+    <div css={{ gridArea: "primary" }}>{primarySections}</div>
+    <div css={{ gridArea: "secondary" }}>{secondarySections}</div>
+    <div css={{ gridArea: "other" }}>{otherSections}</div>
   </StyledPaper>
 )
