@@ -1,8 +1,8 @@
 import _ from "lodash"
 import React from "react"
 
-import { data, Styles, Header, ISection, Paper, Section } from "../xn-resume"
-import { PageLayout } from "../layouts"
+import { data, Styles, Header, ISection, Paper, Section } from "../../xn-resume"
+import { PageLayout } from "../../layouts"
 
 class ResumePage extends React.PureComponent {
   public renderSections = (sections: { [key: string]: ISection }) =>

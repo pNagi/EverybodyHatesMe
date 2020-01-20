@@ -11,5 +11,4 @@ injectGlobal`
       font-size: ${dimensions.fontSize.print}px;
     }
   }
-
 `
