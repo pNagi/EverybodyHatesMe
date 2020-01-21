@@ -1,10 +1,10 @@
-import _ from 'lodash'
-import React from 'react'
-import CopyToClipboard from 'react-copy-to-clipboard'
-import styled from 'react-emotion'
-import { IconType } from 'react-icons'
-import { breakpoints, colors } from '../styles'
-import { getEmSize } from '../styles/mixins'
+import styled from "@emotion/styled"
+import _ from "lodash"
+import React from "react"
+import CopyToClipboard from "react-copy-to-clipboard"
+import { IconType } from "react-icons"
+import { breakpoints, colors } from "../styles"
+import { getEmSize } from "../styles/mixins"
 export interface IContact {
   IconComponent: IconType
   text: string
@@ -31,7 +31,7 @@ const StyledContact = styled.div<{ copyable?: boolean }>`
   padding: ${getEmSize(5)}em;
   color: ${colors.ivory.z8};
   letter-spacing: ${getEmSize(1)}em;
-  user-select: ${props => (props.copyable ? 'all' : 'auto')};
+  user-select: ${props => (props.copyable ? "all" : "auto")};
 
   &:hover {
     background: ${colors.ivory.z2};
@@ -39,12 +39,12 @@ const StyledContact = styled.div<{ copyable?: boolean }>`
   }
 
   &:not(:hover):not(:last-child):after {
-    content: '·';
+    content: "·";
     position: absolute;
     right: 0.5em;
   }
 
-  &:not(:hover) > *:nth-child(3) {
+  &:not(:hover) > *:last-child {
     visibility: hidden;
   }
 
@@ -59,7 +59,7 @@ const StyledContact = styled.div<{ copyable?: boolean }>`
 
 const StyledContactLink = styled.a`
   &:not(:hover):not(:last-child) > *:after {
-    content: '·';
+    content: "·";
     position: absolute;
     right: 0.5em;
   }
@@ -76,7 +76,7 @@ const StyledTooltip = styled.div<{ visible: boolean }>`
   left: 50%;
   padding: 0 ${getEmSize(5)}em;
   transform: ${props =>
-    props.visible ? 'translate(-50%, 100%)' : 'translate(-50%, 50%)'};
+    props.visible ? "translate(-50%, 100%)" : "translate(-50%, 50%)"};
   transition: all 0.2s;
   transition-delay: 0.2s;
   border-radius: ${getEmSize(2)}em;
@@ -115,7 +115,7 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
     { IconComponent, text, link, ActionIconComponent, tip }: IContact,
     key: string
   ) => {
-    const copyable = key === 'email'
+    const copyable = key === "email"
     const content = (
       <StyledContact
         key={key}

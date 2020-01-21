@@ -4,12 +4,12 @@ interface ICSSModule {
 
 // type shims for CSS modules
 
-declare module '*.module.scss' {
+declare module "*.module.scss" {
   const cssModule: ICSSModule
   export = cssModule
 }
 
-declare module '*.module.css' {
+declare module "*.module.css" {
   const cssModule: ICSSModule
   export = cssModule
 }

@@ -1,9 +1,9 @@
-import _ from 'lodash'
-import React from 'react'
-import styled from 'react-emotion'
-import { FaCode, FaGithub, FaInfoCircle } from 'react-icons/fa'
-import { Group } from './Group'
-import { Tags } from './Tags'
+import styled from "@emotion/styled"
+import _ from "lodash"
+import React from "react"
+import { FaCode, FaGithub, FaInfoCircle } from "react-icons/fa"
+import { Group } from "./Group"
+import { Tags } from "./Tags"
 
 const StyledLink = styled.a`
   font-size: 0.9em;
@@ -24,12 +24,12 @@ export const Projects: React.SFC<{ projects: { [key: string]: IProject } }> = ({
     {_.map(projects, (project: IProject, key: string) => (
       <React.Fragment key={key}>
         <h5>
-          <FaCode /> {project.title}{' '}
+          <FaCode /> {project.title}{" "}
           {project.github && (
             <StyledLink href={project.github} target="_blank">
               <FaGithub />
             </StyledLink>
-          )}{' '}
+          )}{" "}
           {project.link && (
             <StyledLink href={project.link} target="_blank">
               <FaInfoCircle />

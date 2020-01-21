@@ -1,10 +1,10 @@
-import { graphql, StaticQuery } from 'gatsby'
-import React from 'react'
-import Helmet from 'react-helmet'
-import { IconContext } from 'react-icons'
+import { graphql, StaticQuery } from "gatsby"
+import React from "react"
+import Helmet from "react-helmet"
+import { IconContext } from "react-icons"
 
-import 'modern-normalize'
-import '../styles/normalize'
+import "modern-normalize"
+import "../styles/normalize"
 
 interface IStaticQueryProps {
   site: {
@@ -33,10 +33,10 @@ export const PageLayout: React.SFC = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: data.site.siteMetadata.description }
+            { name: "description", content: data.site.siteMetadata.description }
           ]}
         />
-        <IconContext.Provider value={{ color: 'inherit' }}>
+        <IconContext.Provider value={{ color: "inherit" }}>
           {children}
         </IconContext.Provider>
       </React.Fragment>
