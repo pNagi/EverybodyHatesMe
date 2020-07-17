@@ -27,7 +27,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-typescript": "^2.1.26",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "modern-normalize": "^0.6.0",
     "polished": "^3.4.2",
     "react": "^16.12.0",
